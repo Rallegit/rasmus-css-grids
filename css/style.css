@@ -1,0 +1,168 @@
+body{
+	background: url(../images/12_col.gif) center top repeat-y;
+	background-size: 90%;
+}
+/* Mobile */
+/* Mobile */
+/* Mobile */
+.gridcontainer{
+	display:grid;
+	width: 90%;
+	margin: 20px auto;
+	grid-gap: 1% 1.5%;
+	grid-template-rows: repeat(10, minmax(200px, 1fr));
+	grid-template-columns: 1fr;
+	grid-template-areas: 
+	'h1'
+	'box1'
+	'box2'
+	'box3'
+	'cont'
+	'side'
+	'foot'
+	'foot'
+	'foot'
+	'foot';
+}
+header{
+	grid-area: h1;
+	border: 1px solid #333;
+}
+.box1{
+	grid-area: box1;
+	border: 1px solid #333;
+}
+.box2{
+	grid-area: box2;
+	border: 1px solid #333;
+}
+.box3{
+	grid-area: box3;
+	border: 1px solid #333;
+}
+.content{
+	grid-area: cont;
+	border: 1px solid #333;
+}
+.sidebar{
+	grid-area: side;
+	border: 1px solid #333;
+}
+.f1{grid-area:f1;}
+.f2{grid-area:f2;}
+.f3{grid-area:f3;}
+.f4{grid-area:f4;}
+footer{
+	grid-area: foot;
+	display: grid;
+	grid-template-rows: repeat(4, 1fr));
+	grid-gap: 2% 1%;
+	border: 1px solid #333;
+	grid-template-areas:
+	'f1'
+	'f2'
+	'f3'
+	'f4'
+}
+footer > div{
+	border: 1px solid #333;
+	margin: 5px;
+}
+/* Tablett */
+/* Tablett */
+/* Tablett */ 
+@media only screen and (min-width: 768px) {
+	.gridcontainer{
+	display:grid;
+	width: 90%;
+	margin: 20px auto;
+	grid-gap: 1% 1.5%;
+	grid-template-rows: repeat(5, minmax(200px, 1fr));
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-areas: 
+	'h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1'
+	'box1 box1 box1 box1 box2 box2 box2 box2 box3 box3 box3 box3'
+	'cont cont cont cont cont cont side side side side side side'
+	'foot foot foot foot foot foot foot foot foot foot foot foot'
+	'foot foot foot foot foot foot foot foot foot foot foot foot';
+}
+footer{
+	grid-area: foot;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 2% 1%;
+	border: 1px solid #333;
+	grid-template-areas: 
+	'f1 f2'
+	'f3 f4'
+}
+footer > .f1 .f2 .f3 .f4{
+	border: 1px solid #333;
+	margin: 5px;
+}
+	}
+/* Small Desktop */
+/* Small Desktop */ 
+/* Small Desktop */
+@media only screen and (min-width: 960px) {
+	.gridcontainer{
+	display:grid;
+	width: 90%;
+	margin: 20px auto;
+	grid-gap: 1% 1.5%;
+	grid-template-rows: repeat(4, minmax(200px, 1fr));
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-areas: 
+	'h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1'
+	'box1 box1 box1 box2 box2 box2 box2 box2 box2 box3 box3 box3'
+	'cont cont cont cont cont cont cont cont side side side side'
+	'foot foot foot foot foot foot foot foot foot foot foot foot';
+}
+footer{
+	grid-area: foot;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1fr;
+	grid-gap: 2% 1%;
+	border: 1px solid #333;
+	grid-template-areas: 
+	'f1 f2 f3 f4'
+}
+footer > .f1 .f2 .f3 .f4{
+	border: 1px solid #333;
+	margin: 5px;
+}
+}
+/* Wide Desktop */
+/* Wide Desktop */
+/* Wide Desktop */ 
+@media only screen and (min-width: 1200px) {
+.gridcontainer{
+	display:grid;
+	width: 90%;
+	margin: 20px auto;
+	grid-gap: 1% 1.5%;
+	grid-template-rows: repeat(4, minmax(200px, 1fr));
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-areas: 
+	'h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1'
+	'box1 box1 box2 box2 box2 box2 box2 box2 box2 box2 box3 box3'
+	'cont cont cont cont cont cont cont cont cont side side side'
+	'foot foot foot foot foot foot foot foot foot foot foot foot';
+}
+footer{
+	grid-area: foot;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1fr;
+	grid-gap: 2% 1%;
+	border: 3px solid #333;
+	grid-template-areas: 
+	'f1 f2 f3 f4'
+}
+footer > .f1 .f2 .f3 .f4{
+	border: 2px solid #333;
+	margin: 5px;
+}
+}
